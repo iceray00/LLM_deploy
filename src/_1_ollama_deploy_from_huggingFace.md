@@ -43,6 +43,7 @@ You are a helpful assistant.
 ```
 export OLLAMA_MODELS=/root/autodl-tmp/models
 echo 'export OLLAMA_MODELS=/root/autodl-tmp/models' >> ~/.bashrc
+
 ```
 
 下载 **ollama** ：

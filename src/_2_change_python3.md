@@ -15,9 +15,8 @@ cd Python-3.11.9
 
 ```
 sudo apt-get update
-sudo apt-get install sqlite3 libsqlite3-dev build-essential zlib1g-dev libffi-dev libssl-dev
-sudo apt-get install libbz2-dev libreadline-dev libsqlite3-dev
-sudo apt-get install libdb-dev libgdbm-dev tk-dev uuid-dev
+sudo apt-get install sqlite3 libsqlite3-dev build-essential zlib1g-dev libffi-dev libssl-dev -y
+sudo apt-get install libbz2-dev libreadline-dev libsqlite3-dev libdb-dev libgdbm-dev tk-dev uuid-dev -y
 
 ```
 

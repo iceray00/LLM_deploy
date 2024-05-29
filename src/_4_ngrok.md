@@ -14,3 +14,14 @@ ngrok config add-authtoken [Your_authtoken]
 ```
 
 记得关闭学术加速
+
+
+
+```
+ngrok http 8080
+```
+
+Share the local URL with http://localhost:8080
+
+
+

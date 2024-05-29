@@ -39,6 +39,12 @@ You are a helpful assistant.
 ```
 
 
+修改后续模型安装路径：
+```
+export OLLAMA_MODELS=/root/autodl-tmp/models
+echo 'export OLLAMA_MODELS=/root/autodl-tmp/models' >> ~/.bashrc
+```
+
 下载 **ollama** ：
 ```
 curl -fsSL https://ollama.com/install.sh | sh

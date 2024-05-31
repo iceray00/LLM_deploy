@@ -3,18 +3,19 @@
 
 
 
-从Hugging Face中下载GGUF为后缀的开源模型
+Download the open source model from Hugging Face with `.gguf `as the suffix
 
-比如：（以阿里开源的通义千问Qwen1.5的7B模型为例子）
+For example: (Take Alibaba open source Qwen1.5-7B model as an example):
+
 ```bash
 wget https://huggingface.co/Qwen/Qwen1.5-7B-Chat-GGUF/resolve/main/qwen1_5-7b-chat-q4_0.gguf?download=true
 ```
 
-在相同文件夹下，创建`Modelfile`文件：
+In the same folder, create a `Modelfile` file:
 ```bash
 vim Modelfile
 ```
-Create a Modelfile:
+### Create a Modelfile:
 ```
 FROM ./[Model_q_*].gguf
 
@@ -39,27 +40,36 @@ You are a helpful assistant.
 ```
 
 
-修改后续模型安装路径：
+Change the ollama's `models` installation default path:
 ```
 export OLLAMA_MODELS=/root/autodl-tmp/models
 echo 'export OLLAMA_MODELS=/root/autodl-tmp/models' >> ~/.bashrc
-
+source ~/.bashrc
 ```
 
-下载 **ollama** ：
+## Download **ollama** ：
 ```
 curl -fsSL https://ollama.com/install.sh | sh
+
 ```
 
 
-在一个Terminal中其中ollama服务：
+### Start ollama serve in one Terminal:
 ```
 ollama serve
 ```
 
-使用ollama提供自定义进行装载：
+### create `.gguf` model loading by ollama
+Use ollama's `create` directive to customize the load local `.gguf` format large model:
 ```
 ollama create [Model_name] -f ./Modelfile
+```
+
+### List models on your computer
+
+```
+ollama list
+ollama ls
 ```
 
 
@@ -98,12 +108,6 @@ The image features a yellow smiley face, which is likely the central focus of th
 ```
 $ ollama run llama3 "Summarize this file: $(cat README.md)"
  Ollama is a lightweight, extensible framework for building and running language models on the local machine. It provides a simple API for creating, running, and managing models, as well as a library of pre-built models that can be easily used in a variety of applications.
-```
-
-### List models on your computer
-
-```
-ollama list
 ```
 
 ### Start Ollama

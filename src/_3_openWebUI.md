@@ -27,14 +27,14 @@ node -v && npm -v
 
 
 ### 2.
-```
+```bash
 conda create -n webui python=3.10
 conda init bash
 source ~/.bashrc
 conda activate webui
 ```
 
-```
+```bash
 git clone https://github.com/open-webui/open-webui.git
 cd open-webui/
 
@@ -57,6 +57,9 @@ pip3 install open-webui
 
 open-webui serve
 ```
+
+
+
 
 
 

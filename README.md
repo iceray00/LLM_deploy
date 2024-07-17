@@ -28,7 +28,7 @@ open-webui serve
 ngrok http 8080
 ```
 
-**Be sure to turn off Academic acceleration**
+**Be sure to turn off Academic acceleration(VPN)**
 
 
 

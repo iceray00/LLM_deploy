@@ -2,7 +2,7 @@
 ## _1_
 
 
-
+### 1.1 Download model from HuggingFace
 Download the open source model from Hugging Face with `.gguf `as the suffix
 
 For example: (Take Alibaba open source Qwen1.5-7B model as an example):
@@ -11,11 +11,12 @@ For example: (Take Alibaba open source Qwen1.5-7B model as an example):
 wget https://huggingface.co/Qwen/Qwen1.5-7B-Chat-GGUF/resolve/main/qwen1_5-7b-chat-q4_0.gguf?download=true
 ```
 
+### 1.2 Create a Modelfile:
 In the same folder, create a `Modelfile` file:
 ```bash
 vim Modelfile
 ```
-### Create a Modelfile:
+
 ```
 FROM ./[Model_q_*].gguf
 
@@ -40,6 +41,9 @@ You are a helpful assistant.
 ```
 
 
+## 2 
+
+### 2.1 Change default path
 Change the ollama's `models` installation default path:
 ```
 export OLLAMA_MODELS=/root/autodl-tmp/models
@@ -47,23 +51,25 @@ echo 'export OLLAMA_MODELS=/root/autodl-tmp/models' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-## Download **ollama** ：
+
+### 2.2 Download **ollama** ：
 ```
 curl -fsSL https://ollama.com/install.sh | sh
-
 ```
 
 
-### Start ollama serve in one Terminal:
+### 2.3 Start ollama serve in one Terminal:
 ```
 ollama serve
 ```
 
-### create `.gguf` model loading by ollama
+### 2.4 create `.gguf` model loading by ollama
 Use ollama's `create` directive to customize the load local `.gguf` format large model:
 ```
 ollama create [Model_name] -f ./Modelfile
 ```
+
+## 3 Usage
 
 ### List models on your computer
 
@@ -123,13 +129,13 @@ See the [developer guide](https://github.com/ollama/ollama/blob/main/docs/develo
 Next, start the server:
 
 ```
-./ollama serve
+ollama serve
 ```
 
 Finally, in a separate shell, run a model:
 
 ```
-./ollama run llama3
+ollama run llama3
 ```
 
 ## REST API
@@ -158,10 +164,9 @@ curl http://localhost:11434/api/chat -d '{
 
 
 ## attention:
-- 不要在ollama create之前安装nodejs，不然会不够空间
-```
+- Do not install `nodejs` before `ollama create`, as you will run out of space
 
-```
+* A cursory test shows that `ollama create` is about 1.5-2 times the maximum limit of the model
 
 
 

@@ -13,7 +13,7 @@ ngrok config add-authtoken [Your_authtoken]
 
 ```
 
-记得关闭加速
+Remember to turn off the 🪜
 
 
 

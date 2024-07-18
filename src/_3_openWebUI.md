@@ -58,6 +58,13 @@ pip3 install open-webui
 open-webui serve
 ```
 
+* If you want to update Open-WebUI:
+
+```bash
+pip3 install --upgrade pip
+
+
+```
 
 
 

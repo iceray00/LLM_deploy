@@ -56,6 +56,7 @@ source ~/.bashrc
 ```
 curl -fsSL https://ollama.com/install.sh | sh
 ```
+* You can 
 
 
 ### 2.3 Start ollama serve in one Terminal:

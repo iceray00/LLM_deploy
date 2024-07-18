@@ -56,7 +56,10 @@ source ~/.bashrc
 ```
 curl -fsSL https://ollama.com/install.sh | sh
 ```
-* You can 
+* Also, you can specify the version of ollama like this:
+```bash
+curl -fsSL https://ollama.com/install.sh | OLLAMA_VERSION=0.1.38 sh
+```
 
 
 ### 2.3 Start ollama serve in one Terminal:

@@ -10,7 +10,12 @@
 OLLAMA_MAX_LOADED_MODELS=3 OLLAMA_NUM_PARALLEL=4 ollama serve
 ```
 
+* However, such a setup consumes a lot of VRAM. If CUDA is not large enough, it will cause the reasoning speed to fall off a cliff.
 
+So, if only test something, we can just use in usual:
+```bash
+ollama serve
+```
 
 
 
